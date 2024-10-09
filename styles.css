@@ -208,28 +208,43 @@ nav ul li:hover > a {
 
 /* スマホ横画面用のスタイル */
 @media (max-width: 768px) and (orientation: landscape) {
+
+    .sidebar-title {
+        font-size: 15px; /* フォントサイズを調整 */
+    }
+    
+    /* sidebarのスタイル */
+    .sidebar {
+        width: 200px; /* 左ペインの幅 */
+        font-size: 15px; /* フォントサイズを調整 */
+    }
+
+    /* 左ペインが非表示の時のスタイル */
     .sidebar.hidden {
-        transform: translateX(-100%); /* 左にスライドして隠す */
-        opacity: 0; /* 不透明度を0にして隠す */
-        pointer-events: none; /* クリックイベントを無効にする */
+        transform: translateX(-150px); /* トグルボタンの幅分だけスライド */
     }
 
-    #toggle-button {
-        position: absolute; /* ボタンを絶対配置 */
-        left: 0; /* 左端に配置 */
-        z-index: 1002; /* サイドバーの前面に表示 */
+    /* サイドバーのヘッダーのスタイル */
+    .sidebar-header {
+        display: flex; /* フレックスボックスを使用 */
+        justify-content: space-between; /* タイトルとボタンを左右に配置 */
+        align-items: center; /* 垂直方向に中央揃え */
+        padding: 10px; /* パディング */
+        background-color: #444; /* ヘッダーの背景色 */
+        border-bottom: 1px solid #ffc400;
     }
 
-    .central-pane {
-        display: grid; /* グリッドレイアウトに変更 */
-        grid-template-columns: repeat(2, 1fr); /* 横2列 */
-        gap: 20px; /* アイテム間の隙間 */
-        padding: 10px; /* 余白 */
-    }
+.thumbnail {
+    max-width: 150px; /* 最大幅を設定 */
+}
 
-    .thumbnail {
-        width: 100%; /* サムネイルを横幅いっぱいにする */
-        height: auto; /* 高さを自動にする */
-        max-width: 400px; /* 最大幅を指定（必要に応じて調整） */
-    }
+.thumbnail-container {
+    max-width: calc(100% - 150px); /* 左ペインの幅を考慮 */
+}
+
+.thumbnail-item {
+    flex: 0 1 40%; /* 幅を30%に設定し、最大3つを一行に並べる */
+    max-width: 200px; /* 最大幅を350pxに設定 */
+}
+
 }
