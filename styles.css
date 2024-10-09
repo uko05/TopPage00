@@ -130,7 +130,7 @@ body {
 }
 
 .thumbnail-item {
-    flex: 0 1 30%; /* 幅を30%に設定し、最大3つを一行に並べる */
+    /* flex: 0 1 30%;  */
     max-width: 350px; /* 最大幅を350pxに設定 */
     text-align: center;
     margin: 5px; /* マージンで余白を追加 */
@@ -243,8 +243,7 @@ nav ul li:hover > a {
 }
 
 .thumbnail-item {
-    flex: 0 1 40%; /* 幅を30%に設定し、最大3つを一行に並べる */
-    max-width: 200px; /* 最大幅を350pxに設定 */
+    max-width: 300px; /* 最大幅を350pxに設定 */
 }
 
 }
