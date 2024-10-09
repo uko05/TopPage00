@@ -235,7 +235,7 @@ nav ul li:hover > a {
     }
 
 .thumbnail {
-    max-width: 150px; /* 最大幅を設定 */
+    max-width: 350px; /* 最大幅を設定 */
 }
 
 .thumbnail-container {
