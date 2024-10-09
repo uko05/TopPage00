@@ -176,9 +176,11 @@ body {
 }
 
 .parent-node {
-    padding: 10px; /* 余白を追加 */
-    cursor: pointer; /* カーソルをポインターに */
-    z-index: 1001; /* トグルボタンより前面に表示 */
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    z-index: 1001;
+    display: block; /* 要素をブロック表示にする */
 }
 
 nav ul {
