@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'SDK_JP_WEB'; /* 任意のフォント名 */
+    src: url('font/SDK_JP_WEB.ttf') format('truetype'); /* フォントファイルのパスを指定 */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SDK_JP_WEB', sans-serif; /* 追加したフォントを使用 */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* 背景色を設定 */
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start; /* 左揃え */
+}
+
+/* sidebarのスタイル */
+.sidebar {
+    background-color: #333; /* 左ペインの背景色 */
+    color: white; /* 左ペインのテキスト色 */
+    width: 250px; /* 左ペインの幅 */
+    height: 100%; /* 高さを100%にする */
+    position: fixed; /* 固定位置にする */
+    top: 0; /* 上からの位置 */
+    left: 0; /* 左からの位置 */
+    z-index: 1000; /* 重なり順を設定 */
+    transition: transform 0.3s ease; /* スライドアニメーション */
+    background: linear-gradient(to bottom, #444, #777); /* グラデーション背景 */
+    border-right: 5px solid #ffcc00; /* ボーダーを追加 */
+}
+
+/* 左ペインが非表示の時のスタイル */
+.sidebar.hidden {
+    transform: translateX(-200px); /* トグルボタンの幅分だけスライド */
+}
+
+/* サイドバーのヘッダーのスタイル */
+.sidebar-header {
+    display: flex; /* フレックスボックスを使用 */
+    justify-content: space-between; /* タイトルとボタンを左右に配置 */
+    align-items: center; /* 垂直方向に中央揃え */
+    padding: 10px; /* パディング */
+    background-color: #444; /* ヘッダーの背景色 */
+    border-bottom: 1px solid #ffc400;
+}
+
+.sidebar.active {
+    transform: translateX(0); /* アクティブ状態で表示 */
+}
+
+/* 初期状態で左ペインを表示するためのスタイル */
+.sidebar {
+    transform: translateX(0); /* 左ペインを表示 */
+}
+
+.child-nodes {
+    display: none; /* 初期状態で非表示 */
+    list-style-type: none; /* リストのスタイルをなくす */
+    padding-left: 20px; /* インデントを追加 */
+}
+
+.child-nodes.active {
+    display: block; /* アクティブ状態で表示 */
+}
+
+.sidebar-title {
+    font-family: 'SDK_JP_WEB', sans-serif; /* 使用するフォント */
+    font-size: 20px; /* フォントサイズを調整 */
+    color: white; /* テキストカラー */
+    margin-left: 10px; /* 左のマージンを調整 */
+}
+
+/* トグルボタンのスタイル */
+#toggle-button {
+    font-family: 'SDK_JP_WEB', sans-serif; /* トグルボタンにも同じフォントを適用 */
+    border: 2px solid #ffffff; /* ボーダーを追加 */
+    background-color: #444; /* デフォルトを灰色に */
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    height: 35px;
+    margin-left: 10px;
+}
+
+/* ホバー時におしゃれな黄色に */
+#toggle-button:hover {
+    background-color: #ffcc00; /* ホバー時の黄色 */
+}
+
+.main-content {
+    margin-left: 250px; /* 左ペインの幅を考慮 */
+    flex: 1; /* 残りのスペースを占める */
+    padding: 10px;
+    display: flex; /* フレックスボックスを使用 */
+    flex-direction: column; /* 縦方向に配置 */
+    align-items: center; /* 中央揃え */
+}
+
+.main-title {
+    font-family: 'SDK_JP_WEB', sans-serif; /* 使用するフォント */
+    font-size: 24px; /* フォントサイズを調整 */
+    color: #333; /* テキストの色 */
+    text-align: center; /* 中央揃え */
+    margin-bottom: 20px; /* 下のマージンを追加 */
+}
+
+
+.thumbnail {
+    width: 100%; /* サムネイル画像がDivに収まるように幅を調整 */
+    max-width: 300px; /* 最大幅を設定 */
+    height: auto; /* 高さは自動調整 */
+    height: auto; /* 高さは自動で調整 */
+    border: 2px solid #ffcc00; /* ボーダーを追加 */
+    border-radius: 5px; /* 角を丸くする */
+    transition: transform 0.2s; /* ホバー時の変化をスムーズに */
+}
+
+.thumbnail-container {
+    display: flex; /* フレックスボックスを使用 */
+    justify-content: flex-start; /* 左寄せに変更 */
+    flex-wrap: wrap; /* サムネイルがはみ出さないように折り返す */
+    max-width: calc(100% - 250px); /* 左ペインの幅を考慮 */
+}
+
+.thumbnail-item {
+    flex: 0 1 30%; /* 幅を30%に設定し、最大3つを一行に並べる */
+    max-width: 350px; /* 最大幅を350pxに設定 */
+    text-align: center;
+    margin: 5px; /* マージンで余白を追加 */
+    border: 2px solid #ffcc00; /* ボーダーを追加 */
+    border-radius: 8px; /* 角を丸くする */
+    padding: 10px; /* パディングを追加 */
+    background-color: #fff; /* 背景色を白に */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* 影を追加 */
+}
+
+.thumbnail-title {
+    font-family: 'SDK_JP_WEB', sans-serif; /* フォントを指定 */
+    font-size: 24px; /* フォントサイズを調整 */
+    color: #333; /* テキストの色 */
+    margin-bottom: 10px; /* 下のマージン */
+}
+
+.thumbnail:hover {
+    transform: scale(1.05); /* ホバー時に少し拡大 */
+}
+
+.thumbnail-item:hover {
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); /* ホバー時に影を追加 */
+}
+
+.twitter-container {
+    display: flex; /* フレックスボックスを使用 */
+    flex-direction: column; /* 縦に配置 */
+    align-items: center; /* 中央揃え */
+    margin-top: 20px; /* 上部に余白を追加 */
+}
+
+.twitter-icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.sad_label {
+    color: Gray;
+    font-size: 10px;
+}
+
+.parent-node {
+    padding: 10px; /* 余白を追加 */
+    cursor: pointer; /* カーソルをポインターに */
+    z-index: 1001; /* トグルボタンより前面に表示 */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+/* 子ノードのホバー効果を追加 */
+nav ul li .child-nodes li:hover {
+    background-color: rgba(255, 204, 0, 0.3); /* 子ノードにホバー時の背景色を追加 */
+}
+
+/* 親ノードのホバー効果を無効にする */
+nav ul li:hover > a {
+    background-color: transparent; /* 親ノードのホバー時に背景色を透明に */
+}
+
+@media (max-width: 800px) {
+    .sidebar {
+        width: 200px; /* 画面幅が狭いときは幅を狭くする */
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>うーこの部屋</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSSファイルのリンク -->
+</head>
+<body>
+    <div class="container">
+     <!-- ----------------------------左ペイン------------------------------------------- -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-title">うーこの部屋</a> <!-- リンクを追加 -->
+                <button id="toggle-button" aria-expanded="true" aria-label="メニューを閉じる">☰</button>
+            </div>
+            <nav id="nav-links">
+                <ul>
+                    <li>
+                        <a href="#" class="parent-node">▼ 推しキャラランキング</a> <!-- デフォルトで表示 -->
+                        <ul class="child-nodes active"> <!-- デフォルトで表示 -->
+                            <li><a href="https://uko05.github.io/TiersList01/">　原神</a></li>
+                            <li><a href="https://uko05.github.io/TiersList02/">　スタレ【運命】</a></li>
+                            <li><a href="https://uko05.github.io/TiersList03/">　スタレ【属性】</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+     <!-- ----------------------------左ペイン------------------------------------------- -->
+        
+        <div class="main-content">
+            <div class="thumbnail-container">
+                <div class="thumbnail-item">
+                    <div class="thumbnail-title">原神</div>
+                    <a href="https://uko05.github.io/TiersList01/">
+                        <img src="Image/01_genshin.png" alt="原神" class="thumbnail">
+                    </a>
+                </div>
+                <div class="thumbnail-item">
+                    <div class="thumbnail-title">スタレ【運命】</div>
+                    <a href="https://uko05.github.io/TiersList02/">
+                        <img src="Image/02_starrail.png" alt="スタレ【運命】" class="thumbnail">
+                    </a>
+                </div>
+                <div class="thumbnail-item">
+                    <div class="thumbnail-title">スタレ【属性】</div>
+                    <a href="https://uko05.github.io/TiersList03/">
+                        <img src="Image/03_starrail.png" alt="スタレ【属性】" class="thumbnail">
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+            <a href="https://x.com/uko_dayo_" target="_blank">
+                <img src="Image/twitter_image.png" alt="Twitter" class="twitter-icon">
+            </a>
+            <Label class="sad_label">  ＜友達ください…</Label>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- JavaScriptファイルのリンク -->
+</body>
+</html>
