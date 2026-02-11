@@ -1,126 +1,114 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>うーこの部屋</title>
-    <link rel="stylesheet" href="styles.css"> <!-- CSSファイルのリンク -->
+
+    <link rel="stylesheet" href="styles.css" />
+
     <!-- Favicon -->
     <link rel="icon" href="public/scripts/favicon_io/favicon.ico" type="image/x-icon">
     <link rel="icon" sizes="16x16" href="public/scripts/favicon_io/favicon-16x16.png">
     <link rel="icon" sizes="32x32" href="public/scripts/favicon_io/favicon-32x32.png">
-    
+
     <!-- Apple Touch Icon (for iOS) -->
     <link rel="apple-touch-icon" href="public/scripts/favicon_io/apple-touch-icon.png">
-    
+
     <!-- Android Icons (for Android devices) -->
     <link rel="icon" sizes="192x192" href="public/scripts/favicon_io/android-chrome-192x192.png">
     <link rel="icon" sizes="512x512" href="public/scripts/favicon_io/android-chrome-512x512.png">
-    
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-91N9KJXJKX"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-91N9KJXJKX');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-91N9KJXJKX');
     </script>
 </head>
-<body>
-    <div class="container">
-     <!-- ----------------------------左ペイン------------------------------------------- -->
-        <div class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <a href="index.html" class="sidebar-title">うーこの部屋</a> <!-- リンクを追加 -->
-                <button id="toggle-button" aria-expanded="true" aria-label="メニューを閉じる">☰</button>
-            </div>
-            <nav id="nav-links">
-                <ul>
-                    <li>
-                        <a href="#" class="parent-node">▼ 推しキャラランキング</a> <!-- デフォルトで表示 -->
-                        <ul class="child-nodes active"> <!-- デフォルトで表示 -->
-                            <li><a href="https://uko05.github.io/TiersList01/">　原神</a></li>
-                            <li><a href="https://uko05.github.io/TiersList02/">　スタレ【運命】</a></li>
-                            <li><a href="https://uko05.github.io/TiersList03/">　スタレ【属性】</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li>
-                        <a href="#" class="parent-node">▼ フリーフォーマット</a> <!-- デフォルトで表示 -->
-                        <ul class="child-nodes active"> <!-- デフォルトで表示 -->
-                            <li><a href="https://uko05.github.io/genshinFormat04/">　原神</a></li>
-                            <li><a href="https://uko05.github.io/starrailFormat05/">　スタレ</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li>
-                        <a href="#" class="parent-node">▼ チェックシート</a> <!-- デフォルトで表示 -->
-                        <ul class="child-nodes active"> <!-- デフォルトで表示 -->
-                            <li><a href="https://uko05.github.io/genshinCheck06/">　原神</a></li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-            </nav>
+
+<body class="portal-page">
+
+    <header class="portal-header">
+        <!-- 右上：言語切替 -->
+        <div class="lang-switch" aria-label="Language switch">
+            <label class="lang-option">
+                <input type="radio" name="lang" value="ja" checked />
+                <span data-i18n="langJa">日本語</span>
+            </label>
+            <label class="lang-option">
+                <input type="radio" name="lang" value="en" />
+                <span data-i18n="langEn">English</span>
+            </label>
         </div>
-     <!-- ----------------------------左ペイン------------------------------------------- -->
-        
-        <div class="main-content">
-            <div class="thumbnail-container">
-            
-                <div class="thumbnail-item">
-                    <div class="thumbnail-title">原神</div>
-                    <a href="https://uko05.github.io/TiersList01/">
-                        <img src="Image/01_genshin.png" alt="原神" class="thumbnail">
-                    </a>
-                </div>
-                
-                <div class="thumbnail-item">
-                    <div class="thumbnail-title">スタレ【運命】</div>
-                    <a href="https://uko05.github.io/TiersList02/">
-                        <img src="Image/02_starrail.png" alt="スタレ【運命】" class="thumbnail">
-                    </a>
-                </div>
-                
-                <div class="thumbnail-item">
-                    <div class="thumbnail-title">スタレ【属性】</div>
-                    <a href="https://uko05.github.io/TiersList03/">
-                        <img src="Image/03_starrail.png" alt="スタレ【属性】" class="thumbnail">
-                    </a>
-                </div>
-                
-                <div class="thumbnail-item">
-                    <div class="thumbnail-title">原神フリーフォーマット</div>
-                    <a href="https://uko05.github.io/genshinFormat04/">
-                        <img src="Image/04_free.png" alt="原神" class="thumbnail">
-                    </a>
-                </div>
-                
-                <div class="thumbnail-item">
-                    <div class="thumbnail-title">スタレフリーフォーマット</div>
-                    <a href="https://uko05.github.io/starrailFormat05/">
-                        <img src="Image/05_free.png" alt="スタレ" class="thumbnail">
-                    </a>
-                </div>
-                
-                <div class="thumbnail-item">
-                    <div class="thumbnail-title">原神チェックシート</div>
-                    <a href="https://uko05.github.io/genshinCheck06/">
-                        <img src="Image/06_check.png" alt="原神" class="thumbnail">
-                    </a>
-                </div>
-                
+
+        <h1 id="site-title" data-i18n="homeTitle">うーこの部屋</h1>
+    </header>
+
+    <main class="portal-container">
+
+        <!-- 推しキャラランキング -->
+        <section class="portal-section">
+            <h2 id="sec-ranking" data-i18n="secRanking">推しキャラランキング</h2>
+
+            <div class="card-grid">
+                <a href="https://uko05.github.io/TiersList01/" class="card">
+                    <h3 data-i18n="cardGenshin">原神</h3>
+                    <img src="Image/01_genshin.png" alt="原神" loading="lazy">
+                </a>
+
+                <a href="https://uko05.github.io/TiersList02/" class="card">
+                    <h3 data-i18n="cardStarrailPath">スタレ【運命】</h3>
+                    <img src="Image/02_starrail.png" alt="スタレ【運命】" loading="lazy">
+                </a>
+
+                <a href="https://uko05.github.io/TiersList03/" class="card">
+                    <h3 data-i18n="cardStarrailElem">スタレ【属性】</h3>
+                    <img src="Image/03_starrail.png" alt="スタレ【属性】" loading="lazy">
+                </a>
             </div>
-            
-            <div>
-            <a href="https://x.com/uko_dayo_" target="_blank">
-                <img src="Image/twitter_image.png" alt="Twitter" class="twitter-icon">
-            </a>
-            <Label class="sad_label">  ＜友達ください…</Label>
+        </section>
+
+        <!-- フリーフォーマット -->
+        <section class="portal-section">
+            <h2 id="sec-free" data-i18n="secFree">フリーフォーマット</h2>
+
+            <div class="card-grid">
+                <a href="https://uko05.github.io/genshinFormat04/" class="card">
+                    <h3 data-i18n="cardGenshin">原神</h3>
+                    <img src="Image/04_free.png" alt="原神フリー" loading="lazy">
+                </a>
+
+                <a href="https://uko05.github.io/starrailFormat05/" class="card">
+                    <h3 data-i18n="cardStarrail">スタレ</h3>
+                    <img src="Image/05_free.png" alt="スタレフリー" loading="lazy">
+                </a>
             </div>
-        </div>
-    </div>
-    <script src="script.js"></script> <!-- JavaScriptファイルのリンク -->
+        </section>
+
+        <!-- チェックシート -->
+        <section class="portal-section">
+            <h2 id="sec-check" data-i18n="secCheck">チェックシート</h2>
+
+            <div class="card-grid card-grid-single">
+                <a href="https://uko05.github.io/genshinCheck06/" class="card">
+                    <h3 data-i18n="cardGenshinCheck">#原神チェックシート</h3>
+                    <img src="Image/06_check.png" alt="原神チェック" loading="lazy">
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="portal-footer">
+        <a href="https://x.com/uko_dayo_" target="_blank" rel="noopener noreferrer" class="twitter-link">
+            <img src="Image/twitter_image.png" alt="X(Twitter)" class="twitter-icon">
+        </a>
+        <span id="footer-text" data-i18n="friend">＜友達ください…</span>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
