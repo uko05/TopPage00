@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cardStarrailElem: "スタレ【属性】",
       cardStarrail: "スタレ",
       cardGenshinCheck: "#原神チェックシート",
+      cardStarRailCheck: "#スタレチェックシート",
     },
     en: {
       homeTitle: "Uko's Room",
@@ -76,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cardStarrailElem: "Star Rail (Element)",
       cardStarrail: "Star Rail",
       cardGenshinCheck: "Genshin",
+      cardStarRailCheck: "Star Rail",
     },
   };
 
