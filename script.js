@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       secRanking: "推しキャラランキング",
       secFree: "フリーフォーマット",
       secCheck: "チェックシート",
+      secGame: "ゲーム",
       friend: "＜友達ください…",
       langJa: "日本語",
       langEn: "English",
@@ -62,12 +63,14 @@ document.addEventListener("DOMContentLoaded", () => {
       cardStarrail: "スタレ",
       cardGenshinCheck: "#原神チェックシート",
       cardStarRailCheck: "#スタレチェックシート",
+      cardGenshinQuiz: "原神クイズ王",
     },
     en: {
       homeTitle: "Uko's Room",
       secRanking: "Oshi Character Ranking",
       secFree: "Free Format",
       secCheck: "Check Sheet",
+      secGame: "Game",
       friend: "< Follow me on X!",
       langJa: "Japanese",
       langEn: "English",
@@ -78,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cardStarrail: "Star Rail",
       cardGenshinCheck: "Genshin",
       cardStarRailCheck: "Star Rail",
+      cardGenshinQuiz: "Genshin Quiz(JP Only)",
     },
   };
 
