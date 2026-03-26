@@ -2,7 +2,7 @@
  * うーこの部屋 共通サイドバー
  *
  * 使い方: 各ページの </body> 直前に下記1行を追加するだけ
- *   <script src="https://uko05.github.io/00_TopPage/shared/sidebar.js"></script>
+ *   <script src="https://uko05.github.io/TopPage00/shared/sidebar.js"></script>
  *
  * ★ 新しいページを追加するときは MENU 配列だけ編集すれば全ページに反映されます ★
  */
@@ -18,14 +18,14 @@
 
   const TOP_LINK = {
     label: 'うーこの部屋',
-    url: 'https://uko05.github.io/00_TopPage/'
+    url: 'https://uko05.github.io/TopPage00/'
   };
 
   const MENU = [
     {
       label: '初心者向け',
       children: [
-        { label: 'これいる聖遺物', url: 'https://uko05.github.io/ArtifactCheck13/' },
+        { label: 'これいる聖遺物', url: 'https://uko05.github.io/artifactCheck/' },
       ]
     },
     {
