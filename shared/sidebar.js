@@ -116,6 +116,7 @@
       transition: left 0.25s ease;
       padding-top: 64px;
       box-sizing: border-box;
+      text-align: left;
     }
     #uko-sidebar.open { left: 0; }
 
