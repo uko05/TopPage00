@@ -23,9 +23,9 @@
 
   const MENU = [
     {
-      label: '初心者向け',
+      label: '便利ツール',
       children: [
-        { label: 'これいる聖遺物', url: 'https://uko05.github.io/artifactCheck/' },
+        { label: '【原神】これいる聖遺物', url: 'https://uko05.github.io/artifactCheck/' },
       ]
     },
     {
