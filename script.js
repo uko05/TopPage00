@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cardStarRailCheck: "#スタレチェックシート",
       cardGenshinQuiz: "原神クイズ王",
       cardGenshinZoomUp: "原神ズームアップ",
+      cardGenshinOmikuji: "原神ズームアップ",
     },
     en: {
       homeTitle: "Uko's Room",
@@ -84,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cardStarRailCheck: "Star Rail",
       cardGenshinQuiz: "Genshin Quiz(JP Only)",
       cardGenshinZoomUp: "Genshin ZoomUp(JP Only)",
+      cardGenshinOmikuji: "Genshin Divination",
     },
   };
 
