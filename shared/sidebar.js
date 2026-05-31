@@ -56,6 +56,7 @@
         { label: '原神クイズ王',     url: 'https://genshinquiz-eb690.web.app/' },
         { label: '原神ズームアップ', url: 'https://genshin-zoomup.web.app/' },
         { label: '原神おみくじ', url: 'https://uko05.github.io/14_GenshinOmikuji/' },
+        { label: 'NTEチェッカー', url: 'https://uko05.github.io/16_NTEChecker/' },
       ]
     },
   ];
