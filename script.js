@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const dict = {
     ja: {
       homeTitle: "うーこの部屋",
+      secTools: "便利ツール",
       secRanking: "推しキャラランキング",
       secFree: "フリーフォーマット",
       secCheck: "チェックシート",
@@ -57,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
       langJa: "日本語",
       langEn: "English",
 
+      cardGenshinArtifact: "これいる聖遺物",
       cardGenshin: "原神",
       cardStarrailPath: "スタレ【運命】",
       cardStarrailElem: "スタレ【属性】",
@@ -70,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     en: {
       homeTitle: "Uko's Room",
+      secTools: "Useful Tools",
       secRanking: "Oshi Character Ranking",
       secFree: "Free Format",
       secCheck: "Check Sheet",
@@ -78,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       langJa: "Japanese",
       langEn: "English",
 
+      cardGenshinArtifact: "Artifact Check(JP Only)",
       cardGenshin: "Genshin",
       cardStarrailPath: "Star Rail (Path)",
       cardStarrailElem: "Star Rail (Element)",
