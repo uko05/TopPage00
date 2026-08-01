@@ -47,11 +47,20 @@ body.portal-page {
 }
 .account-link:hover { color: #222; }
 
-/* 右上言語切替（PCは右上固定） */
-.lang-switch {
+/* 右上（ログイン状態＋言語切替、PCは右上固定） */
+.header-topbar {
   position: absolute;
   top: 16px;
   right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: calc(100% - 32px); /* ←切れ保険 */
+  flex-wrap: wrap;              /* ←切れ保険 */
+  justify-content: flex-end;
+}
+
+.lang-switch {
   display: flex;
   gap: 10px;
   padding: 8px 10px;
@@ -59,9 +68,6 @@ body.portal-page {
   border: 1px solid rgba(0,0,0,0.08);
   border-radius: 12px;
   backdrop-filter: blur(6px);
-  max-width: calc(100% - 32px); /* ←切れ保険 */
-  flex-wrap: wrap;              /* ←切れ保険 */
-  justify-content: flex-end;
 }
 
 .lang-option {

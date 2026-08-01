@@ -56,8 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
       secGame: "ゲーム",
       friend: "＜友達ください…",
       accountLink: "アカウント管理（登録は任意です）",
-      langJa: "日本語",
-      langEn: "English",
+      langJa: "JP",
+      langEn: "EN",
 
       cardGenshinArtifact: "これいる聖遺物",
       cardGenshin: "原神",
@@ -80,8 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
       secGame: "Game",
       friend: "< Follow me on X!",
       accountLink: "Account Center (registration optional)",
-      langJa: "Japanese",
-      langEn: "English",
+      langJa: "JP",
+      langEn: "EN",
 
       cardGenshinArtifact: "Artifact Check(JP Only)",
       cardGenshin: "Genshin",

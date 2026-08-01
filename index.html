@@ -32,16 +32,19 @@
 <body class="portal-page">
 
     <header class="portal-header">
-        <!-- 右上：言語切替 -->
-        <div class="lang-switch" aria-label="Language switch">
-            <label class="lang-option">
-                <input type="radio" name="lang" value="ja" checked />
-                <span data-i18n="langJa">日本語</span>
-            </label>
-            <label class="lang-option">
-                <input type="radio" name="lang" value="en" />
-                <span data-i18n="langEn">English</span>
-            </label>
+        <!-- 右上：ログイン状態＋言語切替 -->
+        <div class="header-topbar">
+            <span id="uko-account-status-slot"></span>
+            <div class="lang-switch" aria-label="Language switch">
+                <label class="lang-option">
+                    <input type="radio" name="lang" value="ja" checked />
+                    <span data-i18n="langJa">JP</span>
+                </label>
+                <label class="lang-option">
+                    <input type="radio" name="lang" value="en" />
+                    <span data-i18n="langEn">EN</span>
+                </label>
+            </div>
         </div>
 
         <h1 id="site-title" data-i18n="homeTitle">うーこの部屋</h1>
