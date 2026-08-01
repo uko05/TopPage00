@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cardStarRailCheck: "#スタレチェックシート",
       cardGenshinQuiz: "原神クイズ王",
       cardGenshinZoomUp: "原神ズームアップ",
-      cardGenshinOmikuji: "原神ズームアップ",
+      cardGenshinOmikuji: "原神おみくじ",
       cardNTEChecker: "NTEチェッカー",
     },
     en: {
