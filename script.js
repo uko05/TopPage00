@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       secCheck: "チェックシート",
       secGame: "ゲーム",
       friend: "＜友達ください…",
+      accountLink: "アカウント管理（登録は任意です）",
       langJa: "日本語",
       langEn: "English",
 
@@ -78,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       secCheck: "Check Sheet",
       secGame: "Game",
       friend: "< Follow me on X!",
+      accountLink: "Account Center (registration optional)",
       langJa: "Japanese",
       langEn: "English",
 

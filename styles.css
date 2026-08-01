@@ -38,6 +38,15 @@ body.portal-page {
   color: #666;
 }
 
+.account-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #888;
+  text-decoration: underline;
+}
+.account-link:hover { color: #222; }
+
 /* 右上言語切替（PCは右上固定） */
 .lang-switch {
   position: absolute;
