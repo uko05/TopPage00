@@ -157,6 +157,69 @@ body.portal-page {
   border-radius: 14px;
 }
 
+/* 更新履歴 */
+.update-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 172px; /* 約4行分、それ以上はスクロール */
+  overflow-y: auto;
+}
+
+.update-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-size: 14px;
+}
+
+.update-item:last-child {
+  border-bottom: none;
+}
+
+.update-message-only {
+  justify-content: center;
+  color: #888;
+}
+
+.update-link {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.update-link:hover .update-message {
+  text-decoration: underline;
+}
+
+.update-repo {
+  flex-shrink: 0;
+  color: #b8860b;
+  font-weight: bold;
+}
+
+.update-message {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+}
+
+.update-date {
+  flex-shrink: 0;
+  color: #999;
+  font-size: 12px;
+}
+
 /* フッター */
 .portal-footer {
   text-align: center;
@@ -240,6 +303,21 @@ body.portal-page {
 
   .lang-option {
     font-size: 13px;
+  }
+
+  .update-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    font-size: 13px;
+  }
+
+  .update-link {
+    max-width: 100%;
+  }
+
+  .update-list {
+    max-height: 220px; /* スマホは1件2行になるため少し高め */
   }
 }
 

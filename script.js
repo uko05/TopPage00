@@ -49,6 +49,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const dict = {
     ja: {
       homeTitle: "うーこの部屋",
+      secUpdates: "更新履歴",
+      updatesLoading: "読み込み中...",
+      updatesEmpty: "最近の更新はありません",
+      updatesError: "更新履歴を取得できませんでした",
       secTools: "便利ツール",
       secRanking: "推しキャラランキング",
       secFree: "フリーフォーマット",
@@ -73,6 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     en: {
       homeTitle: "Uko's Room",
+      secUpdates: "Recent Updates",
+      updatesLoading: "Loading...",
+      updatesEmpty: "No recent updates",
+      updatesError: "Failed to load recent updates",
       secTools: "Useful Tools",
       secRanking: "Oshi Character Ranking",
       secFree: "Free Format",
