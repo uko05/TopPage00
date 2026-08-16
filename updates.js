@@ -10,19 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const CACHE_TTL_MS = 10 * 60 * 1000; // 10分
 
   // トップページにカードとして掲載中のリポジトリのみを対象にする
+  // url: クリック時の遷移先（GitHubのコミットページではなく、各サイトの公開ページ）
   const REPO_LABELS = {
-    artifactCheck13: { ja: "これいる聖遺物", en: "Artifact Check" },
-    TiersList01: { ja: "推しキャラランキング(原神)", en: "Oshi Ranking (Genshin)" },
-    TiersList02: { ja: "推しキャラランキング(スタレ運命)", en: "Oshi Ranking (Star Rail Path)" },
-    TiersList03: { ja: "推しキャラランキング(スタレ属性)", en: "Oshi Ranking (Star Rail Element)" },
-    genshinFormat04: { ja: "フリーフォーマット(原神)", en: "Free Format (Genshin)" },
-    starrailFormat05: { ja: "フリーフォーマット(スタレ)", en: "Free Format (Star Rail)" },
-    genshinCheck06: { ja: "原神チェックシート", en: "Genshin Check Sheet" },
-    starrailCheck07: { ja: "スタレチェックシート", en: "Star Rail Check Sheet" },
-    "11_GenshinQuiz": { ja: "原神クイズ王", en: "Genshin Quiz" },
-    "12_GenshinZoomUp": { ja: "原神ズームアップ", en: "Genshin ZoomUp" },
-    "14_GenshinOmikuji": { ja: "原神おみくじ", en: "Genshin Omikuji" },
-    "16_NTEChecker": { ja: "NTEチェッカー", en: "NTE Checker" },
+    artifactCheck13: { ja: "これいる聖遺物", en: "Artifact Check", url: "https://uko05.github.io/artifactCheck13/" },
+    TiersList01: { ja: "推しキャラランキング(原神)", en: "Oshi Ranking (Genshin)", url: "https://uko05.github.io/TiersList01/" },
+    TiersList02: { ja: "推しキャラランキング(スタレ運命)", en: "Oshi Ranking (Star Rail Path)", url: "https://uko05.github.io/TiersList02/" },
+    TiersList03: { ja: "推しキャラランキング(スタレ属性)", en: "Oshi Ranking (Star Rail Element)", url: "https://uko05.github.io/TiersList03/" },
+    genshinFormat04: { ja: "フリーフォーマット(原神)", en: "Free Format (Genshin)", url: "https://uko05.github.io/genshinFormat04/" },
+    starrailFormat05: { ja: "フリーフォーマット(スタレ)", en: "Free Format (Star Rail)", url: "https://uko05.github.io/starrailFormat05/" },
+    genshinCheck06: { ja: "原神チェックシート", en: "Genshin Check Sheet", url: "https://uko05.github.io/genshinCheck06/" },
+    starrailCheck07: { ja: "スタレチェックシート", en: "Star Rail Check Sheet", url: "https://uko05.github.io/starrailCheck07/" },
+    "11_GenshinQuiz": { ja: "原神クイズ王", en: "Genshin Quiz", url: "https://uko05.github.io/11_GenshinQuiz/" },
+    "12_GenshinZoomUp": { ja: "原神ズームアップ", en: "Genshin ZoomUp", url: "https://uko05.github.io/12_GenshinZoomUp/" },
+    "14_GenshinOmikuji": { ja: "原神おみくじ", en: "Genshin Omikuji", url: "https://uko05.github.io/14_GenshinOmikuji/" },
+    "16_NTEChecker": { ja: "NTEチェッカー", en: "NTE Checker", url: "https://uko05.github.io/16_NTEChecker/" },
   };
 
   const listEl = document.getElementById("update-list");
@@ -72,13 +73,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     listEl.innerHTML = "";
     cachedItems.forEach((item) => {
-      const label = REPO_LABELS[item.repo] ? REPO_LABELS[item.repo][lang] : item.repo;
+      const repoInfo = REPO_LABELS[item.repo];
+      const label = repoInfo ? repoInfo[lang] : item.repo;
 
       const li = document.createElement("li");
       li.className = "update-item";
 
       const a = document.createElement("a");
-      a.href = item.url;
+      a.href = (repoInfo && repoInfo.url) || item.url;
       a.target = "_blank";
       a.rel = "noopener noreferrer";
       a.className = "update-link";
