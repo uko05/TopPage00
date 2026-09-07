@@ -27,6 +27,7 @@
       children: [
         { label: '【原神】これいる聖遺物', url: 'https://uko05.github.io/artifactCheck13/' },
         { label: 'アカウント管理', url: 'https://uko05.github.io/24_AccountCenter/' },
+        { label: '画像保管庫', url: 'https://uko05.github.io/17_storage/' },
       ]
     },
     {
