@@ -62,6 +62,13 @@
         { label: 'NTEチェッカー', url: 'https://uko05.github.io/16_NTEChecker/' },
       ]
     },
+    {
+      label: 'うーこポイント',
+      children: [
+        { label: 'うーこポイント交換所', url: 'https://uko05.github.io/08_UPoint/' },
+        { label: 'うーこオークション', url: 'https://uko05.github.io/26_UkoAuction/' },
+      ]
+    },
   ];
 
   /* ===================================================================

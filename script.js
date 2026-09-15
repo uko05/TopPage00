@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
       secFree: "フリーフォーマット",
       secCheck: "チェックシート",
       secGame: "ゲーム",
+      secUkoPoint: "うーこポイント",
       friend: "＜友達ください…",
       accountLink: "アカウント管理（登録は任意です）",
       langJa: "JP",
@@ -74,6 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
       cardGenshinZoomUp: "原神ズームアップ",
       cardGenshinOmikuji: "原神おみくじ",
       cardNTEChecker: "NTEチェッカー",
+      cardGazou: "画像切り抜き連番保存ツール",
+      cardUPoint: "うーこポイント交換所",
+      cardUkoAuction: "うーこオークション",
     },
     en: {
       homeTitle: "Uko's Room",
@@ -86,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
       secFree: "Free Format",
       secCheck: "Check Sheet",
       secGame: "Game",
+      secUkoPoint: "Uko Points",
       friend: "< Follow me on X!",
       accountLink: "Account Center (registration optional)",
       langJa: "JP",
@@ -102,6 +107,9 @@ document.addEventListener("DOMContentLoaded", () => {
       cardGenshinZoomUp: "Genshin ZoomUp(JP Only)",
       cardGenshinOmikuji: "Genshin Divination",
       cardNTEChecker: "NTE Checker(JP Only)",
+      cardGazou: "Image Crop Tool(JP Only)",
+      cardUPoint: "Uko Point Exchange",
+      cardUkoAuction: "Uko Auction",
     },
   };
 
