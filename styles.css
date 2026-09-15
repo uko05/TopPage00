@@ -5,6 +5,8 @@
 /* 事故防止：padding/border込みで幅計算 */
 * { box-sizing: border-box; }
 
+.hidden { display: none !important; }
+
 @font-face {
   font-family: 'mihoyo-zenzero';
   src: url('font/mihoyo-zenzero.ttf') format('truetype');
@@ -186,6 +188,54 @@ body.portal-page {
 .update-message-only {
   justify-content: center;
   color: #888;
+}
+
+/* 管理者専用通知 */
+.admin-notify-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.admin-notify-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-size: 14px;
+}
+
+.admin-notify-item:last-child {
+  border-bottom: none;
+}
+
+.admin-notify-item a {
+  color: #222;
+  text-decoration: none;
+}
+
+.admin-notify-item a:hover {
+  text-decoration: underline;
+}
+
+.admin-notify-badge {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: #d32f2f;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: bold;
+  line-height: 1;
 }
 
 .update-link {

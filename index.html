@@ -52,6 +52,13 @@
 
     <main class="portal-container">
 
+        <!-- 管理者専用通知(機種変申請・画像保管庫の承認待ち・フレンド募集の通報)。
+             管理者以外には常に非表示(admin-notify.jsが判定できた時だけhiddenを外す)。 -->
+        <section class="portal-section hidden" id="admin-notify-section">
+            <h2>管理者通知</h2>
+            <ul class="admin-notify-list" id="admin-notify-list"></ul>
+        </section>
+
         <!-- 更新履歴 -->
         <section class="portal-section">
             <h2 id="sec-updates" data-i18n="secUpdates">更新履歴</h2>
@@ -202,6 +209,7 @@
     <script src="script.js"></script>
     <script src="updates.js"></script>
     <script type="module" src="https://uko05.github.io/24_AccountCenter/account-status.js"></script>
+    <script type="module" src="admin-notify.js"></script>
 
     <!-- 共通サイドバー -->
     <!-- ローカル確認用: -->
