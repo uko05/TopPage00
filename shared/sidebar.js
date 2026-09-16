@@ -60,6 +60,7 @@
         { label: '原神ズームアップ', url: 'https://uko05.github.io/12_GenshinZoomUp/' },
         { label: '原神おみくじ', url: 'https://uko05.github.io/14_GenshinOmikuji/' },
         { label: 'NTEチェッカー', url: 'https://uko05.github.io/16_NTEChecker/' },
+        { label: '原神・スタレ画面メーカー', url: 'https://uko05.github.io/22_PlayMaker/' },
       ]
     },
     {
