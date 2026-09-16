@@ -29,6 +29,7 @@
         { label: 'アカウント管理', url: 'https://uko05.github.io/24_AccountCenter/' },
         { label: '画像保管庫', url: 'https://uko05.github.io/17_storage/' },
         { label: '画像切り抜き連番保存ツール', url: 'https://uko05.github.io/18_gazou/' },
+        { label: 'フレンド募集掲示板', url: 'https://uko05.github.io/25_FriendBoard/' },
       ]
     },
     {
