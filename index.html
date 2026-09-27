@@ -257,10 +257,32 @@
   .uko-about li{margin:2px 0;list-style:revert}
   .uko-about dt{font-weight:bold;margin-top:6px}
   .uko-about dd{margin:0 0 4px 1em}
+  .uko-about [hidden]{display:none!important}
   </style>
   <details class="uko-about">
-    <summary>このサイトについて</summary>
-    <div class="uko-about-body"><h2>うーこの部屋とは</h2><p>原神・崩壊：スターレイルが好きな人向けの、無料のツールとゲームをまとめたサイトです。推しキャラランキングやチェックシートで自分の「好き」を画像にしてSNSでシェアしたり、みんなとリアルタイムのクイズで遊んだりできます。</p><h2>できること</h2><ul><li><b>画像を作ってシェア：</b>推しキャラランキング、フリーフォーマット（ミリしら表・建国顔/傾国顔）、チェックシート、原神・スタレ画面メーカー</li><li><b>便利ツール：</b>これいる聖遺物（聖遺物のいる・いらない判定）、フレンド募集掲示板</li><li><b>みんなで遊ぶ：</b>原神クイズ王、原神ズームアップ、原神おみくじ</li></ul><p>アカウント登録（任意）をすると、拡張機能を解放することができます！</p></div>
+    <summary><span data-uko-lang="ja">このサイトについて</span><span data-uko-lang="en" hidden>About this site</span></summary>
+    <div class="uko-about-body" data-uko-lang="ja"><h2>うーこの部屋とは</h2><p>原神・崩壊：スターレイルが好きな人向けの、無料のツールとゲームをまとめたサイトです。推しキャラランキングやチェックシートで自分の「好き」を画像にしてSNSでシェアしたり、みんなとリアルタイムのクイズで遊んだりできます。</p><h2>できること</h2><ul><li><b>画像を作ってシェア：</b>推しキャラランキング、フリーフォーマット（ミリしら表・建国顔/傾国顔）、チェックシート、原神・スタレ画面メーカー</li><li><b>便利ツール：</b>これいる聖遺物（聖遺物のいる・いらない判定）、フレンド募集掲示板</li><li><b>みんなで遊ぶ：</b>原神クイズ王、原神ズームアップ、原神おみくじ</li></ul><p>アカウント登録（任意）をすると、拡張機能を解放することができます！</p></div>
+    <div class="uko-about-body" data-uko-lang="en" lang="en" hidden><h2>What is Uko's Room?</h2><p>A collection of free tools and games for fans of Genshin Impact and Honkai: Star Rail. Turn your favorites into images with the Oshi Character Ranking or Check Sheets and share them on social media, or play real-time quizzes with everyone.</p><h2>What you can do</h2><ul><li><b>Make and share images:</b> Oshi Character Ranking, Free Format (Know-nothing charts, Nation-building / Nation-ruining face), Check Sheets, Genshin / Star Rail Screen Maker</li><li><b>Useful tools:</b> Artifact Check (keep or discard artifacts), Friend Recruitment Board</li><li><b>Play together:</b> Genshin Quiz, Genshin ZoomUp, Genshin Omikuji</li></ul><p>Register an account (optional) to unlock extra features!</p></div>
   </details>
+  <script>
+  (function(){
+    // 説明文の日英切り替え。言語ラジオがあるサイトはその選択、ないサイトは共通のlocalStorage('lang')に合わせる
+    var box=document.currentScript.previousElementSibling;
+    function cur(){
+      var r=document.querySelector('input[name="lang"]:checked');
+      if(r) return r.value==='en'?'en':'ja';
+      try{return localStorage.getItem('lang')==='en'?'en':'ja';}catch(e){return 'ja';}
+    }
+    function apply(){
+      var l=cur();
+      box.querySelectorAll('[data-uko-lang]').forEach(function(n){n.hidden=n.getAttribute('data-uko-lang')!==l;});
+    }
+    apply();
+    document.addEventListener('change',function(e){if(e.target&&e.target.name==='lang')setTimeout(apply,0);});
+    document.addEventListener('DOMContentLoaded',apply);
+    window.addEventListener('load',apply);
+    new MutationObserver(apply).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+  })();
+  </script>
 </body>
 </html>
