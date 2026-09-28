@@ -392,4 +392,16 @@
 
   initLinkModePreference();
 
+  /* ===================================================================
+     新しいバージョンが出たら自動で読み込み直す(2026-09-29追加)
+     ページに <meta name="uko-reload-version"> がある時だけ auto-reload.js を読み込む。
+     使い方は auto-reload.js 冒頭のコメント参照。
+  =================================================================== */
+  if (document.querySelector('meta[name="uko-reload-version"]') && !window.__ukoAutoReloadStarted) {
+    var ar = document.createElement('script');
+    ar.src = 'https://uko05.github.io/TopPage00/shared/auto-reload.js';
+    ar.async = true;
+    document.head.appendChild(ar);
+  }
+
 })();
