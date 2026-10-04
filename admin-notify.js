@@ -108,7 +108,28 @@ function startListening() {
   section.classList.remove('hidden');
 }
 
+// ===== タイトル下の「アカウント管理」リンク(2026-10-04) =====
+// ログイン中は「ログイン中: (ログインID)」と表示する(「登録は任意です」のままだと、ログインできて
+// いないように見えるため)。ログインIDは 24_AccountCenter の登録時のメール(ID@uko05.internal)から取る。
+// ログアウト中は data-i18n に戻して、script.js の言語切り替えに任せる。
+const AUTH_EMAIL_SUFFIX = '@uko05.internal';
+let loggedInId = null;
+function renderAccountLink() {
+  const el = document.querySelector('.portal-header .account-link, a.account-link');
+  if (!el) return;
+  if (loggedInId) {
+    el.removeAttribute('data-i18n');
+    el.textContent = (localStorage.getItem('lang') === 'en' ? 'Logged in: ' : 'ログイン中: ') + loggedInId;
+  } else if (!el.hasAttribute('data-i18n')) {
+    el.setAttribute('data-i18n', 'accountLink');
+    el.textContent = localStorage.getItem('lang') === 'en' ? 'Account Center (registration optional)' : 'アカウント管理（登録は任意です）';
+  }
+}
+document.querySelectorAll('input[name="lang"]').forEach((r) => r.addEventListener('change', renderAccountLink));
+
 onAuthStateChanged(auth, async (user) => {
+  loggedInId = user && user.email && user.email.endsWith(AUTH_EMAIL_SUFFIX) ? user.email.slice(0, -AUTH_EMAIL_SUFFIX.length) : null;
+  renderAccountLink();
   const admin = await isEffectiveAdmin(user);
   const section = document.getElementById('admin-notify-section');
   if (admin) {
