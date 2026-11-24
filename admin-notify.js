@@ -1,7 +1,7 @@
 /**
  * トップページ 管理者専用通知パネル
  *
- * 機種変申請(24_AccountCenter)・画像保管庫の承認待ち(17_storage)・
+ * 機種変申請(24_AccountCenter)・画像保管庫の承認待ち(17_storage)・フレンド承認板の画像確認待ち・
  * フレンド募集の通報(25_FriendBoard)を1箇所にまとめて表示する。
  * 管理者以外には何も表示しない(admin-notify-sectionはhiddenのまま)。
  */
@@ -56,9 +56,17 @@ const NOTIFY_ITEMS = [
   {
     id: 'storage17',
     label: '画像保管庫の承認待ち',
-    url: 'https://uko05.github.io/17_storage/',
+    url: 'https://uko05.github.io/17_storage/#admin-section',
     collection: 'screenshotStorageImages',
     filter: ['moderationStatus', '==', 'flagged'],
+  },
+  {
+    // 2026-11-24: フレンド承認板「画像保管庫の画像を公開する」の目視確認待ち
+    id: 'friendImage',
+    label: 'フレンド承認板の画像確認待ち',
+    url: 'https://uko05.github.io/24_AccountCenter/admin/#fb-image-review-section',
+    collection: 'friendBoardImageReviews',
+    filter: ['status', '==', 'pending'],
   },
   {
     id: 'friendReport',
